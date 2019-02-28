@@ -1,0 +1,669 @@
+/*
+   Import partials below
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  background: transparent;
+  outline: none;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* lato-300 - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/lato-v14-latin-300.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Light"), local("Lato-Light"), url("../fonts/lato-v14-latin-300.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v14-latin-300.woff2") format("woff2"), url("../fonts/lato-v14-latin-300.woff") format("woff"), url("../fonts/lato-v14-latin-300.ttf") format("truetype"), url("../fonts/lato-v14-latin-300.svg#Lato") format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-regular - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato-v14-latin-regular.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Regular"), local("Lato-Regular"), url("../fonts/lato-v14-latin-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v14-latin-regular.woff2") format("woff2"), url("../fonts/lato-v14-latin-regular.woff") format("woff"), url("../fonts/lato-v14-latin-regular.ttf") format("truetype"), url("../fonts/lato-v14-latin-regular.svg#Lato") format("svg");
+  /* Legacy iOS */
+}
+
+/* lato-700 - latin */
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/lato-v14-latin-700.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Bold"), local("Lato-Bold"), url("../fonts/lato-v14-latin-700.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v14-latin-700.woff2") format("woff2"), url("../fonts/lato-v14-latin-700.woff") format("woff"), url("../fonts/lato-v14-latin-700.ttf") format("truetype"), url("../fonts/lato-v14-latin-700.svg#Lato") format("svg");
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/lato-v14-latin-900.eot");
+  /* IE9 Compat Modes */
+  src: local("Lato Black"), local("Lato-Black"), url("../fonts/lato-v14-latin-900.eot?#iefix") format("embedded-opentype"), url("../fonts/lato-v14-latin-900.woff2") format("woff2"), url("../fonts/lato-v14-latin-900.woff") format("woff"), url("../fonts/lato-v14-latin-900.ttf") format("truetype"), url("../fonts/lato-v14-latin-900.svg#Lato") format("svg");
+  /* Legacy iOS */
+}
+
+.container {
+  padding: 0 10px;
+}
+
+.descr__subtitle {
+  color: #7c7c7c;
+  font-family: "Lato", sans-serif;
+  font-size: calc(18px + 0.5vw);
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.descr__text {
+  color: #7c7c7c;
+  font-family: "Lato", sans-serif;
+  font-size: calc(14px + 0.5vw);
+  font-weight: 400;
+  margin-bottom: 50px;
+  line-height: 27px;
+}
+
+.descr__title {
+  color: #cf003f;
+  font-family: "Lato", sans-serif;
+  font-size: calc(24px + 1vw);
+  font-weight: 900;
+}
+
+.descr__title::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #99dee3;
+  margin: 22px auto 29px;
+}
+
+.recipe-content__descr {
+  color: #7c7c7c;
+  font-family: "Lato", sans-serif;
+  font-size: calc(13px + 0.5vw);
+  font-weight: 400;
+  margin-bottom: calc(15px + 0.5vw);
+}
+
+.recipe-content__descr:last-of-type {
+  margin-bottom: calc(18px + 1vw);
+}
+
+.recipe-content__inner {
+  padding: 2em;
+}
+
+.recipe-content__item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-content__list {
+  margin-bottom: calc(15px + 0.5vw);
+}
+
+.recipe-content__switcher {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-content__title {
+  color: #626262;
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.recipe-content__text {
+  color: #7c7c7c;
+  font-family: "Lato", sans-serif;
+  font-size: calc(13px + 0.5vw);
+  font-weight: 400;
+  line-height: calc(25.52px + 0.5vw);
+}
+
+.recipe-content__text--ipsum:first-of-type {
+  margin-bottom: 20px;
+}
+
+.recipe-section__content {
+  box-shadow: 0 0 51px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.recipe-section__descr {
+  text-align: center;
+  width: 100%;
+}
+
+.switcher__item {
+  width: 50%;
+  height: 50px;
+  padding: 1em;
+  margin-bottom: calc(37px - 1em);
+  text-align: center;
+  background-color: #cf003f;
+  transition: 0.1s linear;
+  cursor: pointer;
+}
+
+.switcher__item:first-child {
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.switcher__item:last-child {
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.switcher__item--selected {
+  background-color: #ffffff;
+}
+
+.switcher__item--selected .switcher__name {
+  color: #626262;
+}
+
+.switcher__name {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.main__recipe-section {
+  margin-top: calc(50px + 4vw);
+  margin-bottom: calc(50px + 4vw);
+}
+
+.rockets-animation {
+  display: none;
+}
+
+.hero-rocket {
+  z-index: -1;
+  background-image: url("../images/main-rocket.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 352px;
+  height: 658px;
+  -webkit-transform: translateY(1000px);
+  transform: translateY(1000px);
+  -webkit-animation: rocketFly 4s ease-in;
+  animation: rocketFly 4s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.7s;
+  animation-delay: 0.7s;
+  -webkit-animation-timing-function: cubic-bezier(0.34, 0.38, 0.42, 1.02);
+  animation-timing-function: cubic-bezier(0.34, 0.38, 0.42, 1.02);
+  opacity: 0;
+}
+
+.rocket {
+  z-index: -1;
+  background-image: url("../images/second-rocket.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 297px;
+  height: 563px;
+  -webkit-transform: translateY(1000px);
+  transform: translateY(1000px);
+  -webkit-animation: rocketFly 4s ease-in;
+  animation: rocketFly 4s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+  -webkit-animation-timing-function: cubic-bezier(0.34, 0.38, 0.42, 1.02);
+  animation-timing-function: cubic-bezier(0.34, 0.38, 0.42, 1.02);
+  opacity: 0;
+}
+
+.rocket__first {
+  left: 8%;
+  bottom: 30%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.rocket__second {
+  left: 19%;
+  bottom: 14%;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.rocket__third {
+  right: 20%;
+  bottom: 22%;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+
+.rocket__fourth {
+  right: 9%;
+  bottom: 31%;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.cloud {
+  z-index: -1;
+  background-image: url("../images/cloud.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  width: 297px;
+  height: 563px;
+  -webkit-transform: translateY(1000px);
+  transform: translateY(1000px);
+  -webkit-animation: cloudFly 4s ease-in;
+  animation: cloudFly 4s ease-in;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+  -webkit-animation-timing-function: cubic-bezier(0.34, 0.38, 0.42, 1.02);
+  animation-timing-function: cubic-bezier(0.34, 0.38, 0.42, 1.02);
+  opacity: 0;
+}
+
+.cloud__first {
+  left: 2%;
+  bottom: 54%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.cloud__second {
+  left: 11%;
+  bottom: 38%;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.cloud__third {
+  left: 23%;
+  bottom: 43%;
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.cloud__fourth {
+  right: 22%;
+  bottom: 40%;
+  -webkit-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+}
+
+.cloud__fifth {
+  right: 9%;
+  bottom: 33%;
+  -webkit-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.cloud__sixth {
+  right: 0%;
+  bottom: 50%;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes rocketFly {
+  0% {
+    -webkit-transform: translate(-870px, 1000px);
+    transform: translate(-870px, 1000px);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: translate(-98px, 90px);
+    transform: translate(-98px, 90px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 0.8;
+  }
+
+  35% {
+    -webkit-transform: translate(-105px, 100px);
+    transform: translate(-105px, 100px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(-98px, 90px);
+    transform: translate(-98px, 90px);
+    opacity: 1;
+  }
+}
+
+@keyframes rocketFly {
+  0% {
+    -webkit-transform: translate(-870px, 1000px);
+    transform: translate(-870px, 1000px);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: translate(-98px, 90px);
+    transform: translate(-98px, 90px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 0.8;
+  }
+
+  35% {
+    -webkit-transform: translate(-105px, 100px);
+    transform: translate(-105px, 100px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(-98px, 90px);
+    transform: translate(-98px, 90px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes cloudFly {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 0.8;
+  }
+
+  35% {
+    -webkit-transform: translateY(95px);
+    transform: translateY(95px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+  }
+
+  100% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+    opacity: 1;
+  }
+}
+
+@keyframes cloudFly {
+  0% {
+    -webkit-transform: translateY(1000px);
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  20% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 0.8;
+  }
+
+  35% {
+    -webkit-transform: translateY(95px);
+    transform: translateY(95px);
+    -webkit-animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+  }
+
+  100% {
+    -webkit-transform: translateY(90px);
+    transform: translateY(90px);
+    opacity: 1;
+  }
+}
+
+.recipe-page-wrapper {
+  background: linear-gradient(7deg, #fff, white 0%, rgba(255, 255, 255, 0.9) 20.71%, rgba(255, 255, 255, 0.8) 31.71%, rgba(255, 255, 255, 0.4) 39.71%, transparent 43.71%);
+  height: auto;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 660px) {
+  .recipe-content__list {
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .recipe-content__descr {
+    margin-bottom: calc(20px + 0.5vw);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: calc(770px + 6vw);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+
+  .recipe-content__descr {
+    color: #7c7c7c;
+    font-family: "Lato", sans-serif;
+    font-size: calc(15px + 0.5vw);
+    font-weight: 400;
+  }
+
+  .recipe-section__descr {
+    width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .switcher__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.3em;
+  }
+}
+
+@media (min-width: 1320px) {
+  .rockets-animation {
+    display: block;
+  }
+}
+
+@media (min-width: 1780px) {
+  .hero-rocket {
+    left: 15%;
+    bottom: 23%;
+  }
+}
