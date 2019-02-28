@@ -1,0 +1,9 @@
+.recipe-content__title {
+  @include text(
+    $font-size: 24px,
+    $color: $secondary-text-color,
+    $font-weight: $descr-title-font-weight
+  );
+
+  margin-bottom: 20px;
+}

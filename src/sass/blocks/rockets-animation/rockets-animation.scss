@@ -1,0 +1,137 @@
+.rockets-animation {
+  display: none;
+  @media (min-width: $animation-breakpoint) {
+    display: block;
+  }
+}
+
+.hero-rocket {
+  @include rocket-load(
+    url("../images/main-rocket.png"),
+    352px,
+    658px,
+    rocketFly,
+    0.7s
+  );
+  @media (min-width: 1780px) {
+    left: 15%;
+    bottom: 23%;
+  }
+}
+
+.rocket {
+  @include rocket-load(
+    url("../images/second-rocket.png"),
+    297px,
+    563px,
+    rocketFly,
+    0.5s
+  );
+  &__first {
+    left: 8%;
+    bottom: 30%;
+    animation-delay: 0.4s;
+  }
+  &__second {
+    left: 19%;
+    bottom: 14%;
+    animation-delay: 0.5s;
+  }
+  &__third {
+    right: 20%;
+    bottom: 22%;
+    animation-delay: 0.3s;
+  }
+  &__fourth {
+    right: 9%;
+    bottom: 31%;
+    animation-delay: 0.2s;
+  }
+}
+
+.cloud {
+  @include rocket-load(
+    url("../images/cloud.png"),
+    297px,
+    563px,
+    cloudFly,
+    0.4s
+  );
+  &__first {
+    left: 2%;
+    bottom: 54%;
+    animation-delay: 0.4s;
+  }
+  &__second {
+    left: 11%;
+    bottom: 38%;
+    animation-delay: 0.2s;
+  }
+  &__third {
+    left: 23%;
+    bottom: 43%;
+    animation-delay: 0.5s;
+  }
+  &__fourth {
+    right: 22%;
+    bottom: 40%;
+    animation-delay: 0.2s;
+  }
+  &__fifth {
+    right: 9%;
+    bottom: 33%;
+    animation-delay: 0.4s;
+  }
+  &__sixth {
+    right: 0%;
+    bottom: 50%;
+    animation-delay: 0s;
+  }
+}
+
+@keyframes rocketFly {
+  0% {
+    transform: translate(-870px, 1000px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(-98px, 90px);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 0.8;
+  }
+
+  35% {
+    transform: translate(-105px, 100px);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(-98px, 90px);
+    opacity: 1;
+  }
+}
+
+@keyframes cloudFly {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translateY(90px);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+    opacity: 0.8;
+  }
+
+  35% {
+    transform: translateY(95px);
+    animation-timing-function: cubic-bezier(0.24, 0.5, 0.35, 1.23);
+  }
+
+  100% {
+    transform: translateY(90px);
+    opacity: 1;
+  }
+}

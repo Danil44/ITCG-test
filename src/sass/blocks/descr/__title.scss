@@ -1,0 +1,15 @@
+.descr__title {
+  @include text(
+    $primary-pink-color,
+    $font-size: $main-title-font-size,
+    $font-weight: $main-title-font-weight
+  );
+  &::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: $light-blue-color;
+    margin: 22px auto 29px;
+  }
+}

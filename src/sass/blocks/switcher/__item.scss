@@ -1,0 +1,40 @@
+.switcher__item {
+  width: 50%;
+  height: 50px;
+  padding: 1em;
+  margin-bottom: calc(37px - 1em);
+  text-align: center;
+  background-color: $primary-pink-color;
+
+  transition: 0.1s linear;
+  cursor: pointer;
+
+  @media (min-width: $lg-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.3em;
+  }
+
+  &:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  &:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &--selected {
+    background-color: $primary-white-color;
+    & .switcher__name {
+      color: $secondary-text-color;
+    }
+  }
+}
+
+.switcher__name {
+  text-transform: uppercase;
+  @include text($color: $primary-white-color, $font-size: 16px);
+}

@@ -1,0 +1,5 @@
+.descr__text {
+  @include text($font-size: $descr-font-size);
+  margin-bottom: 50px;
+  line-height: 27px;
+}

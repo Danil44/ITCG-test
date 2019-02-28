@@ -1,0 +1,7 @@
+.descr__subtitle {
+  @include text(
+    $font-size: $subtitle-font-size,
+    $font-weight: $subtitle-font-weigth
+  );
+  margin-bottom: 15px;
+}

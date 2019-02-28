@@ -1,0 +1,9 @@
+.recipe-content__list {
+  margin-bottom: calc(15px + 0.5vw);
+
+  @media(min-width: 660px) {
+    width: 65%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

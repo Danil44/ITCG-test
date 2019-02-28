@@ -1,0 +1,9 @@
+.recipe-section__descr {
+  text-align: center;
+  width: 100%;
+  @media (min-width: $lg-width) {
+    width: 650px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

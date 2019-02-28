@@ -1,0 +1,16 @@
+.recipe-content__descr {
+  @include text($font-size: $xs-recipe-descr-font-size);
+  margin-bottom: calc(15px + 0.5vw);
+
+  @media (min-width: $md-width) {
+    margin-bottom: calc(20px + 0.5vw);
+  }
+
+  @media (min-width: $lg-width) {
+    @include text($font-size: $lg-recipe-descr-font-size);
+  }
+
+  &:last-of-type {
+    margin-bottom: calc(18px + 1vw);
+  }
+}

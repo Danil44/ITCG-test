@@ -1,0 +1,7 @@
+.recipe-content__text {
+  @include text($font-size: $xs-recipe-font-size);
+  line-height: calc(25.52px + 0.5vw);
+  &--ipsum:first-of-type {
+      margin-bottom: 20px;
+  }
+}

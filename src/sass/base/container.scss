@@ -1,0 +1,10 @@
+.container {
+  padding: 0 10px;
+
+  @media (min-width: $lg-width) {
+    width: calc(770px + 6vw);
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+  }
+}
